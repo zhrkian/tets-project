@@ -1,8 +1,14 @@
-<div ng-drag="true" ng-drop="true" ng-drag-data="Tomato"> Tomato </div>
+<div ng-drag="true" ng-drop="true" ng-drag-data="Tomato">
+    <i  class="glyphicon glyphicon-ok-circle">Tomato</i>
+</div>
 
 <ul>
     <li ng-repeat="project in Projects" >
-        <div ng-drag="true" ng-drop="true" ng-drag-data="project"> {{project.title}} </div>
+        <div ng-drag="true" ng-drop="true" ng-drag-data="project">
+            <span class="label label-warning">
+                <small>{{project.title}}</small>
+            </span>
+        </div>
     </li>
 </ul>
 

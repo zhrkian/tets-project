@@ -19,7 +19,8 @@ angular.module('tetsProjectApp')
                 scope.onDropComplete = function(data, evt){
                     console.log('onDropComplete');
                     console.log(data);
-                    scope.task[data.kind] = scope.selector[data.kind](data);
+                    data ?
+                        scope.task[data.kind] = scope.selector[data.kind](data) : false;
                 }
 
                 scope.onDragSuccess = function(data, evt){
