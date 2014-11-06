@@ -1,0 +1,10 @@
+<div class="cad-panel"
+     ng-drop="true"
+     ng-drop-success="onDropComplete($data, $event)"
+     ng-drag="true"
+     ng-drag-data="task"
+     ng-drag-success="onDragSuccess($data, $event)">
+    <!--<span class="title">{{task.title}}</span>-->
+
+    <pre>{{task | json}}</pre>
+</div>
