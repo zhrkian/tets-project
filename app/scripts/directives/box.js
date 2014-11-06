@@ -35,6 +35,7 @@ angular.module('tetsProjectApp')
 
                 scope.selector.tomato = function(value){
                     console.log('selector tomato');
+
                     return scope.task.tomatos.push(value);
                 }
             }

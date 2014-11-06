@@ -13,9 +13,12 @@ angular.module('tetsProjectApp')
             restrict: 'E',
             link: function postLink(scope, element, attrs) {
 
+                scope.curTask = null;
+
                 scope.onDropComplete = function(data, evt){
                     console.log('onDropComplete');
                     console.log(data);
+                    scope.curTask = data;
                 }
 
                 scope.onDragSuccess = function(data, evt){

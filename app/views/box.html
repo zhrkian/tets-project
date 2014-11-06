@@ -6,5 +6,9 @@
      ng-drag-success="onDragSuccess($data, $event)">
     <!--<span class="title">{{task.title}}</span>-->
 
-    <pre>{{task | json}}</pre>
+    <i  class="glyphicon glyphicon-ok-circle">{{task.tomatos.length}}</i>
+
+    <span class="label label-warning" ng-if="task.project">
+        <small>{{task.project.title}}</small>
+    </span>
 </div>
