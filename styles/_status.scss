@@ -1,0 +1,461 @@
+//CТАТУСЫ
+
+//contractor_ticket --------------------------------------------
+
+//pending Заказ на формировании
+.contractor_ticket--pending {
+  @extend .text-muted;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.contractor_ticket--pending {
+  @extend .alert-info;
+}
+
+//started Ожидает согласования
+.contractor_ticket--started {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-time;
+  }
+}
+.cad-alert.contractor_ticket--started {
+  @extend .alert-warning;
+}
+
+
+//working В работе
+.contractor_ticket--working {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.contractor_ticket--working {
+  @extend .alert-success;
+}
+
+
+//done Заявка выполнена
+.contractor_ticket--done {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.contractor_ticket--done {
+  @extend .alert-success;
+}
+
+//ticket -----------------------------------------------------
+
+//pending Заказ на формировании
+.ticket--pending {
+  @extend .text-muted;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.ticket--pending {
+  @extend .alert-info;
+}
+
+//started Ожидает согласования
+.ticket--started {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-time;
+  }
+}
+.cad-alert.ticket--started {
+  @extend .alert-warning;
+}
+
+
+//working В работе
+.ticket--working {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.ticket--working {
+  @extend .alert-success;
+}
+
+
+//done Заявка выполнена
+.ticket--done {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.ticket--done {
+  @extend .alert-success;
+}
+
+
+//task ------------------------------------------------------
+
+//pending  Ожидает принятия к оценке
+.task--pending {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-time;
+  }
+}
+.cad-alert.task--pending{
+  @extend .alert-warning;
+}
+
+
+//accepted  Заказ на услугу принят к оценке
+.task--accepted {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-time;
+  }
+}
+.cad-alert.task--accepted{
+  @extend .alert-success;
+}
+
+
+//bid_created  Необходимо утвердить стоимость услуги
+.task--bid_created {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-exclamation-sign;
+  }
+}
+.cad-alert.task--bid_created{
+  @extend .alert-warning;
+}
+
+
+//bid_declined  Оценка отклонена
+.task--bid_declined {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+  }
+}
+.cad-alert.task--bid_declined{
+  @extend .alert-danger;
+}
+
+
+//bid_accepted  Цена согласована
+.task--bid_accepted {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.task--bid_accepted{
+  @extend .alert-success;
+}
+
+
+//declined  Отказано в услуге
+.task--declined {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-exclamation-sign;
+  }
+}
+.cad-alert.task--declined{
+  @extend .alert-danger;
+}
+
+//declined  Отказано в услуге (статус после просмотра катрочки)
+.task--decline_checked {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-exclamation-sign;
+  }
+}
+.cad-alert.task--decline_checked{
+  @extend .alert-danger;
+}
+
+
+//assigned  Передана исполнителю
+.task--assigned {
+  @extend .text-info;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-user;
+  }
+}
+.cad-alert.task--assigned{
+  @extend .alert-info;
+}
+
+
+//working  Исполнитель приступил к работе
+.task--working {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.task--working{
+  @extend .alert-warning;
+}
+
+
+//job_created  Работа сдана — «В работе»
+.task--job_created {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.task--job_created{
+  @extend .alert-warning;
+}
+
+
+//job_declined  Работа отклонена
+.task--job_declined {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-exclamation-sign;
+  }
+}
+.cad-alert.task--job_declined{
+  @extend .alert-danger;
+}
+
+
+//job_accepted  Работа принята
+.task--job_accepted {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.task--job_accepted{
+  @extend .alert-success;
+}
+
+
+//job_delivered  Услуга ожидает приёмки
+.task--job_delivered {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-time;
+  }
+}
+.cad-alert.task--job_delivered{
+  @extend .alert-warning;
+}
+
+
+//job_deflected  Услуга не принята
+.task--job_deflected {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+  }
+}
+.cad-alert.task--job_deflected{
+  @extend .alert-danger;
+}
+
+
+//job_undelivered  Результат не прият заказчиком (после принятия у исполнителя)
+.task--job_undelivered {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+  }
+}
+.cad-alert.task--job_undelivered{
+  @extend .alert-danger;
+}
+
+//job_forwarded  Работа передана заказчику для приемки
+.task--job_forwarded {
+  @extend .text-info;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.task--job_forwarded{
+  @extend .alert-info;
+}
+
+
+//job_unforwarded  Результат не принят заказчиком (сразу заказчику)
+.task--job_unforwarded {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+  }
+}
+.cad-alert.task--job_unforwarded{
+  @extend .alert-danger;
+}
+
+
+//job_need_improve  Отправлена на доработку
+.task--job_need_improve {
+  @extend .text-warning;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-refresh;
+  }
+}
+.cad-alert.task--job_need_improve{
+  @extend .alert-warning;
+}
+
+
+//done  Услуга завершена
+.task--done {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.task--done{
+  @extend .alert-success;
+}
+
+
+//finished_bid_created    (заказчик: Отменено)
+.task--finished_bid_created {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+  }
+}
+.cad-alert.task--finished_bid_created{
+  @extend .alert-danger;
+}
+
+//finished_bid_created    (заказчик: Отменено)
+.task--finished_pending {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+  }
+}
+.cad-alert.task--finished_pending{
+  @extend .alert-danger;
+}
+
+
+
+
+
+
+//bid ------------------------------------------------------------
+
+//pending  Оценка произведена
+.bid--pending {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.bid--pending{
+  @extend .alert-success;
+}
+
+
+//accepted  Цена согласована
+.bid--accepted{
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.bid--accepted{
+  @extend .alert-success;
+}
+
+
+//declined  Оценка отклонена
+.bid--declined {
+  @extend .text-danger;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-remove;
+  }
+}
+.cad-alert.bid--declined{
+  @extend .alert-danger;
+}
+
+
+//project -------------------------------------------------------------
+
+//pending  Черновик
+.project--pending {
+  @extend .text-muted;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.project--pending{
+  @extend .alert-info;
+}
+
+//working  В работе
+.project--working {
+  @extend .text-info;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-cog;
+  }
+}
+.cad-alert.project--working{
+  @extend .alert-info;
+}
+
+//done  Проект завершен
+.project--done {
+  @extend .text-success;
+  .order-status__icon {
+    @extend .glyphicon;
+    @extend .glyphicon-ok;
+  }
+}
+.cad-alert.project--done{
+  @extend .alert-success;
+}
