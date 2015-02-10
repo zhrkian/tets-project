@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
-
+  grunt.loadNpmTasks('grunt-gh-pages');
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
@@ -26,7 +26,12 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
-
+    'gh-pages': {
+      options: {
+        base: 'build'
+      },
+      src: '**/*'
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {

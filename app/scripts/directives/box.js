@@ -19,7 +19,7 @@ angular.module('tetsProjectApp')
                 scope.onDropComplete = function(data, evt){
                     console.log('onDropComplete');
                     console.log(data);
-                    data ?
+                    data && scope.selector[data.kind] ?
                         scope.task[data.kind] = scope.selector[data.kind](data) : false;
                 }
 
@@ -28,16 +28,27 @@ angular.module('tetsProjectApp')
                     console.log(data);
                 }
 
+                scope.deleteTomato = function(data, evt){
+                    console.log(evt);
+                    console.log('Delete tomato!');
+                    scope.task.tomatos--;
+                }
+
                 scope.selector = {};
                 scope.selector.project = function(value){
                     console.log('selector product');
                     return value;
                 }
 
-                scope.selector.tomato = function(value){
-                    console.log('selector tomato');
+                scope.getNumber = function(num) {
+                    return new Array(num);
+                }
 
-                    return scope.task.tomatos.push(value);
+                scope.selector.tomato = function(value, key){
+                    console.log('selector tomato');
+                    scope.task.tomatos++;
+                    console.log(scope.task.tomatos);
+                    return ;
                 }
             }
         };

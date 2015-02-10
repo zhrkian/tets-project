@@ -1,19 +1,40 @@
-<div ng-drag="true" ng-drop="true" ng-drag-data="Tomato">
-    <i  class="glyphicon glyphicon-ok-circle">Tomato</i>
-</div>
+<div class="container"
+     ng-drop="true">
 
-<ul>
-    <li ng-repeat="project in Projects" >
-        <div ng-drag="true" ng-drop="true" ng-drag-data="project">
-            <span class="label label-warning">
-                <small>{{project.title}}</small>
-            </span>
+
+    <box-current></box-current>
+    <div class="row">
+        <div class="col-md-2">
+            <!--Помидра-->
+            <div class="cad-panel">
+                <div ng-drag="true"
+                     ng-drop="true"
+                     ng-drag-data="Tomato">
+                    <i  class="glyphicon glyphicon-ok-circle">Tomato</i>
+                </div>
+            </div>
+            <!--Прожекты-->
+            <div class="cad-panel">
+                <ul>
+                    <li ng-repeat="project in Projects" >
+                        <div ng-drag="true" ng-drop="true" ng-drag-data="project">
+                            <span class="label label-warning">
+                                <small>{{project.title}}</small>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </li>
-</ul>
-
-<div>
-    <box ng-repeat="task in Tasks" task="task"></box>
+        <div class="col-md-9">
+            <!--Таски-->
+            <div class="cad-panel">
+                <ol>
+                    <div ng-repeat="task in Tasks">
+                        <box task="task"></box>
+                    </div>
+                </ol>
+            </div>
+        </div>
+    </div>
 </div>
-
-<box-current></box-current>

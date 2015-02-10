@@ -16,16 +16,16 @@ angular.module('tetsProjectApp')
                 scope.curTask = null;
 
                 scope.onDropComplete = function(data, evt){
-                    console.log('onDropComplete');
-                    console.log(data);
-                    scope.curTask = data;
-                }
+                    console.log('Current Drop Okey');
 
-                scope.onDragSuccess = function(data, evt){
-                    console.log('onDragSuccess');
-                    console.log(data);
+                    data.tomatos ?
+                        (function(){
+                            scope.curTask ?
+                                scope.curTask.active = false : true;
+                            scope.curTask = data;
+                            scope.curTask.active = true;
+                        })(): alert('Будь мужиком!!! Добавь помидоров!');
                 }
-
             }
         };
     });

@@ -44,15 +44,19 @@ angular.module('tetsProjectApp')
                 kind: 'task',
                 title: 'task 1',
                 project: null,
-                tomatos: []
+                tomatos: 0,
+                state: 'unsorted'
             },
             {
                 kind: 'task',
                 title: 'task 2',
                 project: null,
-                tomatos: []
+                tomatos: 0,
+                state: 'unsorted'
             }
         ];
+
+
 
 
     });
